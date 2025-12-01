@@ -1,16 +1,68 @@
-# React + Vite
+# Sales Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based sales dashboard with filtering, sorting, pagination, and data visualization.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📊 Interactive time-series chart
+- 🔍 Advanced filtering (date range, price, email, phone)
+- 📄 Paginated sales table (50 items per page)
+- ⬆️⬇️ Sortable columns (date & price)
+- 💾 Caching for better performance
+- 📱 Fully responsive design
 
-## React Compiler
+## Setup Instructions
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Clone the repository**
 
-## Expanding the ESLint configuration
+```bash
+   git clone <your-repo-url>
+   cd sales-dashboard
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. **Install dependencies**
+
+```bash
+   npm install
+```
+
+3. **Configure API**
+
+   - Open `src/components/SalesDashboard.jsx`
+   - Replace `YOUR_API_BASE_URL` with your actual API URL
+   - Update the authorization body in the `getAuthorization` function
+
+4. **Run the app**
+
+```bash
+   npm start
+```
+
+5. **Build for production**
+
+```bash
+   npm run build
+```
+
+## Deployment
+
+### Vercel
+
+```bash
+npm install -g vercel
+vercel
+```
+
+### Netlify
+
+```bash
+npm run build
+# Drag and drop the 'build' folder to Netlify
+```
+
+## Technologies Used
+
+- React 18
+- Tailwind CSS
+- Recharts
+- Lucide React Icons
